@@ -1,9 +1,9 @@
 all:
 	mkdir -p /home/lleodev/data/mariadb /home/lleodev/data/wordpress
-	docker compose up -d --build
+	docker compose -f srcs/docker-compose.yml up -d --build
 
 clean:
-	docker compose down
+	docker compose -f srcs/docker-compose.yml down
 
 fclean: clean
 	rm -rf /home/lleodev/data

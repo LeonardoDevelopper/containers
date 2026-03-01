@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+export TERM=xterm-256color
 
 DB_PASSWORD="$(cat /run/secrets/db_password)"
 DB_ROOT_PASSWORD="$(cat /run/secrets/db_root_password)"

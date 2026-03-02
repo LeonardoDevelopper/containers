@@ -6,6 +6,9 @@ clean:
 	docker compose -f srcs/docker-compose.yml down
 
 fclean: clean
+	docker rm -f -v mariadb 
+	docker rm -f -v wordpress
+	docker rm -f -v nginx
 	rm -rf /home/lleodev/data
 	rm -rf /home/lleodev/data/wordpress
 
